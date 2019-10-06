@@ -14,6 +14,15 @@
       height: 100vh;
     }
 
+    #preloader {
+      position: absolute;
+      left: -500vw;
+    }
+
+    #preloader img {
+      display: block;
+    }
+
     #root {
       height: 100%;
       width: 100%;
@@ -28,17 +37,21 @@
       font-size: 5rem;
       font-family: 'Saira', sans-serif;
       text-transform: uppercase;
-      background-color: var(--color);
+      background: var(--background) center center fixed;
+      background-size: cover;
       color: #ffffff;
       font-weight: 700;
       text-shadow: 0 0 5px rgba(21, 21, 21, 0.8);
-      transition: background-color .15s 0s ease-in-out;
-      will-change: background-color;
+      will-change: background-image;
       filter: contrast(.8);
     }
   </style>
 </head>
 <body>
+  <div id="preloader">
+      <img src="https://www.collinsflags.com/blog/wp-content/uploads/2013/09/British-Union-Jack-Flag.jpg" width="1" height="1" alt="">
+      <img src="https://www.elplural.com/uploads/s1/58/61/46/fotonoticia-20181011125257-1920.jpeg" width="1" height="1" alt="">
+  </div>
   <div id="root"></div>
 
   <script src="Index.js"></script>
